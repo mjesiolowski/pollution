@@ -11,8 +11,6 @@
    background-size: cover;
 }
 
-/* FORM */
-
 .formContainer {
    display: flex;
    justify-content: center;
@@ -56,8 +54,6 @@
    cursor: pointer;
 }
 
-/* MAIN CONTENT */
-
 .mainContent {
    padding: 20px;
    background-color: rgba(20, 20, 20, .8);
@@ -88,8 +84,6 @@
    font-size: 17px;
    line-height: 1.3;
 }
-
-/* TOGGLERS */
 
 .active {
    display: block;

@@ -2,19 +2,16 @@ const countryList = ['Poland', 'Germany', 'Spain', 'France']
 
 const app = {
    init() {
-      // State
       this.city = []
       this.matchingCountries = []
       this.isRenderCompleted = 0
 
-      // HTML Elements
       this.container = document.querySelector('.app')
       this.input = document.getElementById('countryName')
       this.form = document.querySelector('.form')
       this.autocompleteList = document.querySelector('.autocompleteList')
       this.cityList = document.querySelector('.cityList')
 
-      // Events
       this.form.addEventListener('submit', (e) => this.onSubmitForm(e, this))
 
       this.input.value = this.getStorageValue()
@@ -22,8 +19,7 @@ const app = {
    },
 
    findMatchingCountry() {
-      // Compare input with 'countryList' array
-      const inputHandler = (e) => {
+      const inputHandler = e => {
          this.removeAutocomplete()
 
          const inputValue = e.target.value.toLowerCase()
@@ -50,7 +46,6 @@ const app = {
 
 
    addCountryToAutocomplete(names) {
-      // Add matching country to DOM and render it
       names.forEach(name => {
          const li = document.createElement('li')
          this.autocompleteList.appendChild(li)
@@ -61,7 +56,6 @@ const app = {
    },
 
    updateInput() {
-      // Set input value when clicking on the autocomplete item
       document.querySelectorAll('p.autocompleteItem').forEach(item => item.addEventListener('click', (e) => {
          this.input.value = item.textContent
          this.removeAutocomplete()
@@ -71,7 +65,6 @@ const app = {
    },
 
    removeAutocomplete() {
-      // Delete autocomoplete list
       this.matchingCountries = []
       this.isRenderCompleted = 0
       document.querySelectorAll('ul.autocompleteList>li').forEach(li => li.remove())
@@ -79,7 +72,6 @@ const app = {
 
 
    onSubmitForm(e) {
-      // Submit handler
       e.preventDefault()
       app.removeAutocomplete()
 
@@ -188,7 +180,6 @@ const app = {
    },
 
    onToggle() {
-      // Accordion handler
       this.togglers = [...document.querySelectorAll('.toggler')]
       this.togglers.forEach((toggler) => {
 
