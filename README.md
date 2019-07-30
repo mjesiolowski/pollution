@@ -14,6 +14,9 @@ To see a description click '+' button below city names.
 
 *allowed countries: Paland, Germany, Spain, France
 
+## Website
+https://mjesiolowski.github.io/pollutionApp/
+
 ## API:
 - openaq.org - to render the most polluted cities
 - mediawiki.org - to get descriptions
